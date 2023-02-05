@@ -1,0 +1,27 @@
+class Solution {
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+        int index1=lower_bound(nums,target);
+        int index2=lower_bound(nums,target+1)-1;
+        if (index1 < nums.size() && nums[index1] == target)
+        return {index1, index2};
+    else
+        return {-1, -1};
+}
+
+
+        int lower_bound(vector<int>& nums, int target){
+        int lo=0,hi=nums.size()-1;
+        int mid;
+        while(lo<=hi){
+            int mid=lo+(hi-lo)/2;
+            if(nums[mid]<target)
+                hi=mid+1;
+            
+            else
+                lo=mid-1;
+            
+            return -1;
+              }      
+            
+};
