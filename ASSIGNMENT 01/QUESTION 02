@@ -1,0 +1,13 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+    int main(){
+int i,d,f,sum;
+cin>>i>>d>>f;
+sum=i+d+f;
+cout<<sum;
+return 0;
+    }
